@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rushikesh Gaikwad | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #1e90ff;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #1e90ff;
+      display: inline-block;
+    }
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+    .about-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1e90ff;
+      color: white;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rushikesh Gaikwad</h1>
+    <p>Aspiring IT Professional | Python Programmer | Fresher</p>
+    <nav aria-label="Primary navigation" role="navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="card" style="text-align:center">
+      <img src="1pass.jpg" alt="Rushikesh Gaikwad" class="about-img" />
+      <p><strong>Date of Birth:</strong> 23 May 2005</p>
+      <p><strong>Address:</strong> Wagholi-412207, Pune, Maharashtra</p>
+      <p><strong>Marital Status:</strong> Single</p>
+      <p>I am a motivated and detail-oriented fresher passionate about IT, with a solid foundation in Python and basic computer applications. Currently seeking opportunities to apply and grow my skills in a dynamic environment.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Certifications & Skills</h2>
+    <div class="card">
+      <ul>
+        <li>Python Programming – Disha Computer Institute</li>
+        <li>MS-CIT – Maharashtra State Certificate in Information Technology</li>
+        <li>30 WPM Typing Speed Certificate – Maharashtra State Council of Examinations, Pune</li>
+        <li>Basic Computer Applications</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="card" id="projects-container">
+      <p>Loading projects...</p>
+    </div>
+    <script>
+      const projects = [
+        {
+          title: "Weather App",
+          description: "A simple weather information app using Python and OpenWeatherMap API."
+        },
+        {
+          title: "Basic Calculator",
+          description: "A command-line calculator built in Python that performs basic arithmetic operations."
+        },
+        {
+          title: "Personal Portfolio",
+          description: "A static personal portfolio website made with HTML and CSS."
+        },
+        {
+          title: "Responsive Web Page",
+          description: "A basic responsive webpage layout using only HTML and CSS for practice."
+        }
+      ];
+
+      const container = document.getElementById('projects-container');
+      container.innerHTML = '';
+      projects.forEach(project => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `<h3>${project.title}</h3><p>${project.description}</p>`;
+        container.appendChild(card);
+      });
+    </script>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="card">
+      <p><strong>Email:</strong> <a href="mailto:rushikeshgaikwad2005@gmail.com">rushikeshgaikwad2005@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rushikesh-gaikwad-549b81283" target="_blank">linkedin.com/in/rushikesh-gaikwad-549b81283</a></p>
+      <p><strong>Phone:</strong> +91 8263001408</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rushikesh Gaikwad. All rights reserved.</p>
+  </footer>
+</body>
+</html>
